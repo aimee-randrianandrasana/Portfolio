@@ -55,6 +55,21 @@
             border-bottom: 1px solid var(--border);
         }
 
+        .cv-header-left {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .cv-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            flex-shrink: 0;
+        }
+
         .cv-header-left h1 {
             font-size: 2rem;
             font-weight: 800;
@@ -173,47 +188,19 @@
             color: var(--text-sec);
         }
 
-        .cv-skill-item {
-            margin-bottom: 14px;
-        }
-
-        .cv-skill-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .cv-skill-header {
+        .cv-skill-tags {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 6px;
+            flex-wrap: wrap;
+            gap: 6px;
         }
 
-        .cv-skill-name {
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        .cv-skill-level {
-            font-size: 0.7rem;
-            color: var(--accent);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .cv-progress {
-            width: 100%;
-            height: 5px;
-            background: rgba(59, 130, 246, 0.1);
-            border-radius: 3px;
-            overflow: hidden;
-        }
-
-        .cv-progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--accent), var(--cyan));
-            border-radius: 3px;
-            transition: width 1s ease;
+        .cv-skill-tag {
+            padding: 4px 12px;
+            background: rgba(59, 130, 246, 0.08);
+            border: 1px solid rgba(59, 130, 246, 0.15);
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: var(--text-sec);
         }
 
         .cv-exp-item {
@@ -392,13 +379,9 @@
                 display: none;
             }
 
-            .cv-progress-fill {
-                print-color-adjust: exact;
-                -webkit-print-color-adjust: exact;
-            }
-
             .cv-exp-tag,
             .cv-passion,
+            .cv-skill-tag,
             .cv-exp-item::before,
             .cv-section-title {
                 print-color-adjust: exact;
@@ -445,18 +428,21 @@
     <div class="cv-page">
         <div class="cv-header">
             <div class="cv-header-left">
-                <h1>Randrianandrasana <span class="accent">Jean Aime</span></h1>
-                <p class="role">Developpeur Fullstack &amp; Admin Systeme</p>
-                <p class="tagline">
-                    Passionne par le developpement web et l'administration systeme.
-                    Je construis des applications robustes, du backend a l'interface utilisateur.
-                </p>
+                <img src="images/profile.jpeg" alt="Photo de profil" class="cv-photo"/>
+                <div>
+                    <h1>Randrianandrasana <span class="accent">Jean Aime</span></h1>
+                    <p class="role">Developpeur Fullstack &amp; Admin Systeme</p>
+                    <p class="tagline">
+                        Passionne par le developpement web et l'administration systeme.
+                        Je construis des applications robustes, du backend a l'interface utilisateur.
+                    </p>
+                </div>
             </div>
             <div class="cv-header-right">
-                <span>aimerandria2001@gmail.com</span>
-                <span>+261 34 00 000 00</span>
+                <span>randrianandrasanajeanaimee@gmail.com</span>
+                <span>+261 38 458 68 05</span>
                 <span>Madagascar</span>
-                <a href="https://github.com/aimeeRandria" target="_blank">github.com/aimeeRandria</a>
+                <a href="https://github.com/aimee-randrianandrasana" target="_blank">github.com/aimee-randrianandrasana</a>
             </div>
         </div>
 
@@ -513,78 +499,25 @@
 
             <div class="cv-main">
                 <div class="cv-section">
+                    <h2 class="cv-section-title">Profil</h2>
+                    <p style="font-size: 0.82rem; color: var(--text-sec); line-height: 1.6;">
+                        Developpeur fullstack et administrateur systeme, diplomme de l'ENI en Informatique.
+                        Je cree des applications web robustes (PHP/Laravel, Vue.js) et des apps de bureau (C#/.NET, Python).
+                        Autonome et curieux, je cherche a approfondir mes competences en securite reseau et administration infrastructure.
+                    </p>
+                </div>
+
+                <div class="cv-section">
                     <h2 class="cv-section-title">Competences</h2>
-
-                    <div class="cv-skill-item">
-                        <div class="cv-skill-header">
-                            <span class="cv-skill-name">PHP / Laravel</span>
-                            <span class="cv-skill-level">Avance</span>
-                        </div>
-                        <div class="cv-progress"><div class="cv-progress-fill" style="width: 85%"></div></div>
-                    </div>
-
-                    <div class="cv-skill-item">
-                        <div class="cv-skill-header">
-                            <span class="cv-skill-name">HTML / CSS / JavaScript</span>
-                            <span class="cv-skill-level">Avance</span>
-                        </div>
-                        <div class="cv-progress"><div class="cv-progress-fill" style="width: 90%"></div></div>
-                    </div>
-
-                    <div class="cv-skill-item">
-                        <div class="cv-skill-header">
-                            <span class="cv-skill-name">Vue.js</span>
-                            <span class="cv-skill-level">Avance</span>
-                        </div>
-                        <div class="cv-progress"><div class="cv-progress-fill" style="width: 80%"></div></div>
-                    </div>
-
-                    <div class="cv-skill-item">
-                        <div class="cv-skill-header">
-                            <span class="cv-skill-name">MySQL / MariaDB</span>
-                            <span class="cv-skill-level">Avance</span>
-                        </div>
-                        <div class="cv-progress"><div class="cv-progress-fill" style="width: 80%"></div></div>
-                    </div>
-
-                    <div class="cv-skill-item">
-                        <div class="cv-skill-header">
-                            <span class="cv-skill-name">Python</span>
-                            <span class="cv-skill-level">Avance</span>
-                        </div>
-                        <div class="cv-progress"><div class="cv-progress-fill" style="width: 75%"></div></div>
-                    </div>
-
-                    <div class="cv-skill-item">
-                        <div class="cv-skill-header">
-                            <span class="cv-skill-name">C# / .NET</span>
-                            <span class="cv-skill-level">Intermediaire</span>
-                        </div>
-                        <div class="cv-progress"><div class="cv-progress-fill" style="width: 70%"></div></div>
-                    </div>
-
-                    <div class="cv-skill-item">
-                        <div class="cv-skill-header">
-                            <span class="cv-skill-name">Linux / Reseaux</span>
-                            <span class="cv-skill-level">Avance</span>
-                        </div>
-                        <div class="cv-progress"><div class="cv-progress-fill" style="width: 75%"></div></div>
-                    </div>
-
-                    <div class="cv-skill-item">
-                        <div class="cv-skill-header">
-                            <span class="cv-skill-name">Blender / 3D</span>
-                            <span class="cv-skill-level">Avance</span>
-                        </div>
-                        <div class="cv-progress"><div class="cv-progress-fill" style="width: 70%"></div></div>
-                    </div>
-
-                    <div class="cv-skill-item">
-                        <div class="cv-skill-header">
-                            <span class="cv-skill-name">Git / Outils</span>
-                            <span class="cv-skill-level">Avance</span>
-                        </div>
-                        <div class="cv-progress"><div class="cv-progress-fill" style="width: 80%"></div></div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; font-size: 0.82rem;">
+                        <span style="color: var(--text-sec);">PHP / Laravel</span>
+                        <span style="color: var(--text-sec);">Vue.js / JavaScript</span>
+                        <span style="color: var(--text-sec);">HTML / CSS / Tailwind</span>
+                        <span style="color: var(--text-sec);">MySQL / MariaDB</span>
+                        <span style="color: var(--text-sec);">C# / .NET / Avalonia</span>
+                        <span style="color: var(--text-sec);">Python / PyQt5</span>
+                        <span style="color: var(--text-sec);">Bash / PowerShell</span>
+                        <span style="color: var(--text-sec);">Reseaux (OSPF, RIP)</span>
                     </div>
                 </div>
 
@@ -593,27 +526,18 @@
 
                     <div class="cv-exp-item">
                         <h3 class="cv-exp-title">Mi-Trosa</h3>
-                        <p class="cv-exp-subtitle">Application fullstack — Gestion de prets bancaires</p>
-                        <p class="cv-exp-desc">
-                            Architecture REST API avec authentification SPA. CRUD de prets,
-                            gestion des paiements, export PDF/Excel, tableau de bord dynamique.
-                        </p>
+                        <p class="cv-exp-desc">Application fullstack de gestion de prets bancaires — REST API, authentification SPA, export PDF/Excel, tableau de bord.</p>
                         <div class="cv-exp-tags">
                             <span class="cv-exp-tag">Laravel 12</span>
                             <span class="cv-exp-tag">Vue 3</span>
                             <span class="cv-exp-tag">Tailwind</span>
                             <span class="cv-exp-tag">Chart.js</span>
-                            <span class="cv-exp-tag">Sanctum</span>
                         </div>
                     </div>
 
                     <div class="cv-exp-item">
                         <h3 class="cv-exp-title">Mi-Findra</h3>
-                        <p class="cv-exp-subtitle">Application MVC — Gestion des affectations</p>
-                        <p class="cv-exp-desc">
-                            Architecture MVC personnalisee, protection force brute,
-                            generation PDF, notifications email.
-                        </p>
+                        <p class="cv-exp-desc">Application MVC de gestion des affectations geographiques — protection force brute, generation PDF, notifications email.</p>
                         <div class="cv-exp-tags">
                             <span class="cv-exp-tag">PHP 8.1</span>
                             <span class="cv-exp-tag">MVC</span>
@@ -623,17 +547,34 @@
                     </div>
 
                     <div class="cv-exp-item">
-                        <h3 class="cv-exp-title">Mi-Voyages</h3>
-                        <p class="cv-exp-subtitle">Application de bureau — Reservations ferroviaires</p>
-                        <p class="cv-exp-desc">
-                            Suivi en temps reel, reservations, systeme de control,
-                            architecture MVVM.
-                        </p>
+                        <h3 class="cv-exp-title">AnDao</h3>
+                        <p class="cv-exp-desc">Application de bureau de reservations ferroviaires — suivi temps reel, gestion retards/pannes, export CSV.</p>
                         <div class="cv-exp-tags">
                             <span class="cv-exp-tag">C#</span>
                             <span class="cv-exp-tag">.NET 10</span>
+                            <span class="cv-exp-tag">JetBrains Rider</span>
                             <span class="cv-exp-tag">Avalonia UI</span>
-                            <span class="cv-exp-tag">Dapper</span>
+                            <span class="cv-exp-tag">SQLite</span>
+                        </div>
+                    </div>
+
+                    <div class="cv-exp-item">
+                        <h3 class="cv-exp-title">CompusNay</h3>
+                        <p class="cv-exp-desc">Plateforme de partage de documents universitaires — roles utilisateurs, favoris, commentaires, admin.</p>
+                        <div class="cv-exp-tags">
+                            <span class="cv-exp-tag">PHP</span>
+                            <span class="cv-exp-tag">MySQL</span>
+                            <span class="cv-exp-tag">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="cv-exp-item">
+                        <h3 class="cv-exp-title">Hotelin-Tsika</h3>
+                        <p class="cv-exp-desc">Application de gestion hoteliere — clients, employes, recrutement, paie, import/export CSV.</p>
+                        <div class="cv-exp-tags">
+                            <span class="cv-exp-tag">Python</span>
+                            <span class="cv-exp-tag">PyQt5</span>
+                            <span class="cv-exp-tag">MySQL</span>
                         </div>
                     </div>
                 </div>

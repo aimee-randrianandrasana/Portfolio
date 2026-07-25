@@ -194,6 +194,10 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             navbar.classList.remove('scrolled');
         }
+        if (navToggle && navMenu) {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
     }
 
     // ---------- Scroll Reveal Animations ----------
@@ -328,4 +332,35 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initProgressBars();
     initTagAnimation();
+
+    // ---------- Lightbox ----------
+    const overlay = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const lbCaption = document.getElementById('lightbox-caption');
+
+    document.querySelectorAll('[data-lightbox]').forEach(el => {
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            const src = el.getAttribute('data-lightbox');
+            const caption = el.getAttribute('data-caption') || '';
+            lbImg.src = src;
+            lbCaption.textContent = caption;
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    function closeLightbox() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+        lbImg.src = '';
+    }
+
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay || e.target.classList.contains('lightbox-close')) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) closeLightbox();
+    });
 });
