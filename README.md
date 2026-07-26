@@ -1,2 +1,3 @@
 # Portfolio
-Just my portfolio
+
+Mon portfolio personnel présentant mon profil et mes projets en développement.
