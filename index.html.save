@@ -279,10 +279,10 @@
                             <h3 class="skill-name">Python</h3>
                             <span class="skill-level">Avance</span>
                         </div>
-                        <span class="skill-percent">75%</span>
+                        <span class="skill-percent">80%</span>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress-fill" data-width="75"></div>
+                        <div class="progress-fill" data-width="80"></div>
                     </div>
                 </div>
                 <div class="skill-card reveal-up">
@@ -493,8 +493,9 @@
                             <a href="images/Mi-Findra.png" class="btn btn-small" data-lightbox="images/Mi-Findra.png" data-caption="Mi-Findra — Gestion des affectations">Appercu</a>
                         </div>
                     </div>
-                        <div class="project-content">
-                            <h3 class="project-name">Mi-Findra</h3>
+                    <div class="project-content">
+                        <div class="project-badge">Projet majeur</div>
+                        <h3 class="project-name">Mi-Findra</h3>
                         <p class="project-description">
                             Application web MVC pour la gestion des affectations geographiques des employes
                             au sein d'une organisation.
@@ -526,8 +527,9 @@
                             <a href="images/proj-andao.jpg" class="btn btn-small" data-lightbox="images/proj-andao.png" data-caption="AnDao — Reservations ferroviaires">Appercu</a>
                         </div>
                     </div>
-                        <div class="project-content">
-                            <h3 class="project-name">AnDao</h3>
+                    <div class="project-content">
+                        <div class="project-badge">Projet majeur</div>
+                        <h3 class="project-name">AnDao</h3>
                         <p class="project-description">
                             Application de bureau multiplateforme pour la gestion de reservations ferroviaires.
                             Interface moderne avec suivi en temps reel.
@@ -560,8 +562,9 @@
                             <a href="images/proj-compusnay.jpg" class="btn btn-small" data-lightbox="images/proj-compusnay.jpg" data-caption="CompusNay — Partage de documents">Appercu</a>
                         </div>
                     </div>
-                        <div class="project-content">
-                            <h3 class="project-name">CompusNay</h3>
+                    <div class="project-content">
+                        <div class="project-badge">Projet majeur</div>
+                        <h3 class="project-name">CompusNay</h3>
                         <p class="project-description">
                             Plateforme de partage de documents universitaires permettant aux etudiants
                             de telecharger et partager des cours.
@@ -590,8 +593,9 @@
                             <a href="images/proj-hotel.png" class="btn btn-small" data-lightbox="images/proj-hotel.png" data-caption="Hotelin-Tsika — Gestion hoteliere">Appercu</a>
                         </div>
                     </div>
-                        <div class="project-content">
-                            <h3 class="project-name">Hotelin-Tsika (Desktop/Web)</h3>
+                    <div class="project-content">
+                        <div class="project-badge">Projet majeur</div>
+                        <h3 class="project-name">Hotelin-Tsika (Desktop/Web)</h3>
                         <p class="project-description">
                             Application de bureau pour la gestion complete d'un hotel : clients,
                             employes, recrutement et paie.

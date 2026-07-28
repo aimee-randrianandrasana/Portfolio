@@ -49,6 +49,50 @@
         2px 2px 0 rgba(0, 0, 0, 0.4),
         inset 1px 1px 1px rgba(255, 255, 255, 0.05);
 }
+[data-theme="light"] {
+    --bg-primary: #f5f5f7;
+    --bg-secondary: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f0f0f2;
+    --border: #d1d5db;
+    --border-light: #e5e7eb;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --accent: #2563eb;
+    --accent-light: #3b82f6;
+    --accent-dark: #1d4ed8;
+    --shadow-puffy:
+        4px 4px 0 rgba(0, 0, 0, 0.08),
+        inset 1px 1px 1px rgba(255, 255, 255, 0.8);
+    --shadow-btn:
+        2px 2px 0 rgba(0, 0, 0, 0.08),
+        inset 1px 1px 1px rgba(255, 255, 255, 0.6);
+    --shadow-tag:
+        1px 1px 0 rgba(0, 0, 0, 0.06),
+        inset 1px 1px 1px rgba(255, 255, 255, 0.6);
+}
+[data-theme="light"] body {
+    background: var(--bg-primary);
+}
+[data-theme="light"] .navbar {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+[data-theme="light"] .hero { background: var(--bg-primary); }
+[data-theme="light"] .section { background: var(--bg-primary); }
+[data-theme="light"] .footer { background: var(--bg-secondary); border-top: 1px solid var(--border); }
+[data-theme="light"] .particles-overlay { opacity: 0.03; }
+[data-theme="light"] canvas#particles-canvas { opacity: 0.04; }
+[data-theme="light"] .skill-card { background: var(--bg-card); border: 1px solid var(--border); }
+[data-theme="light"] .project-card { background: var(--bg-card); border: 1px solid var(--border); }
+[data-theme="light"] .about-card { background: var(--bg-card); border: 1px solid var(--border); }
+[data-theme="light"] .contact-card { background: var(--bg-card); border: 1px solid var(--border); }
+[data-theme="light"] .tag { background: var(--bg-card-hover); border: 1px solid var(--border); color: var(--text-secondary); }
+[data-theme="light"] .cv-passion { background: rgba(37, 99, 235, 0.06); border-color: rgba(37, 99, 235, 0.15); }
+[data-theme="light"] .cv-skill-tag { background: rgba(37, 99, 235, 0.06); border-color: rgba(37, 99, 235, 0.15); color: var(--text-secondary); }
+[data-theme="light"] .cv-exp-tag { background: var(--bg-card-hover); border-color: var(--border); color: var(--text-secondary); }
 /* --- Animations "respiration" : la boite pulse doucement au survol, sans que l'ombre change --- */
 @keyframes breathe-sm {
     0%, 100% { transform: translateY(-4px) scale(1); }
@@ -215,6 +259,8 @@ img {
     letter-spacing: -0.5px;
     color: var(--text-primary);
     animation: logo-glow 3s ease-in-out infinite;
+    display: flex;
+    align-items: center;
 }
 @keyframes logo-glow {
     0%, 100% { text-shadow: 0 0 0 transparent; }
@@ -1281,6 +1327,12 @@ img {
     .nav-toggle {
         display: flex;
     }
+    .theme-toggle {
+        position: fixed;
+        top: 18px;
+        right: 60px;
+        z-index: 1001;
+    }
     .nav-menu {
         position: fixed;
         top: 70px;
@@ -1488,6 +1540,30 @@ img {
 .project-image-placeholder img {
     cursor: zoom-in;
 }
+/* Theme toggle */
+.theme-toggle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+.theme-toggle:hover {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+.icon-sun { display: none; }
+.icon-moon { display: block; }
+[data-theme="light"] .icon-sun { display: block; }
+[data-theme="light"] .icon-moon { display: none; }
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }

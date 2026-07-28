@@ -7,13 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        *,
-        *::before,
-        *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --bg: #0a0a0f;
@@ -23,8 +17,6 @@
             --text-sec: #a0a0b0;
             --text-muted: #6b6b80;
             --accent: #3b82f6;
-            --accent-light: #60a5fa;
-            --cyan: #06b6d4;
             --green: #22c55e;
         }
 
@@ -32,23 +24,25 @@
             font-family: 'Inter', sans-serif;
             background: var(--bg);
             color: var(--text);
-            line-height: 1.5;
+            line-height: 1.4;
             -webkit-font-smoothing: antialiased;
+            font-size: 12px;
         }
 
         .cv-page {
-            max-width: 900px;
-            margin: 40px auto;
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto;
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 16px;
+            border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
 
         .cv-header {
             background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%);
-            padding: 48px;
+            padding: 20px 28px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -58,288 +52,210 @@
         .cv-header-left {
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: 16px;
         }
 
         .cv-photo {
-            width: 100px;
-            height: 100px;
+            width: 64px;
+            height: 64px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--accent);
+            border: 2px solid var(--accent);
             flex-shrink: 0;
         }
 
         .cv-header-left h1 {
-            font-size: 2rem;
+            font-size: 1.3rem;
             font-weight: 800;
-            letter-spacing: -0.5px;
+            letter-spacing: -0.3px;
         }
 
-        .cv-header-left h1 .accent {
-            color: var(--accent);
-        }
+        .cv-header-left h1 .accent { color: var(--accent); }
 
         .cv-header-left .role {
-            font-size: 1.1rem;
+            font-size: 0.85rem;
             color: var(--accent);
             font-weight: 600;
-            margin-top: 4px;
+            margin-top: 1px;
         }
 
         .cv-header-left .tagline {
-            font-size: 0.9rem;
+            font-size: 0.78rem;
             color: var(--text-sec);
-            margin-top: 8px;
+            margin-top: 3px;
             max-width: 400px;
         }
 
         .cv-header-right {
             text-align: right;
-            font-size: 0.85rem;
+            font-size: 0.78rem;
             color: var(--text-sec);
             display: flex;
             flex-direction: column;
-            gap: 6px;
-        }
-
-        .cv-header-right a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        .cv-header-right a:hover {
-            text-decoration: underline;
+            gap: 3px;
         }
 
         .cv-body {
             display: grid;
-            grid-template-columns: 1fr 1.8fr;
+            grid-template-columns: 200px 1fr;
             gap: 0;
         }
 
         .cv-sidebar {
             background: rgba(59, 130, 246, 0.03);
-            padding: 36px 32px;
+            padding: 18px 16px;
             border-right: 1px solid var(--border);
         }
 
         .cv-main {
-            padding: 36px 40px;
+            padding: 18px 22px;
         }
 
-        .cv-section {
-            margin-bottom: 32px;
-        }
-
-        .cv-section:last-child {
-            margin-bottom: 0;
-        }
+        .cv-section { margin-bottom: 14px; }
+        .cv-section:last-child { margin-bottom: 0; }
 
         .cv-section-title {
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             color: var(--accent);
-            margin-bottom: 16px;
-            padding-bottom: 8px;
+            margin-bottom: 8px;
+            padding-bottom: 4px;
             border-bottom: 1px solid var(--border);
         }
 
         .cv-info-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
+            gap: 6px;
         }
 
-        .cv-info-item {
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-        }
+        .cv-info-item { display: flex; flex-direction: column; gap: 1px; }
 
         .cv-info-label {
-            font-size: 0.7rem;
+            font-size: 0.6rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
             color: var(--text-muted);
             font-weight: 600;
         }
 
-        .cv-info-value {
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
+        .cv-info-value { font-size: 0.78rem; font-weight: 500; }
 
         .cv-passions {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 8px;
+            gap: 4px;
         }
 
         .cv-passion {
-            padding: 4px 12px;
-            background: rgba(59, 130, 246, 0.08);
-            border: 1px solid rgba(59, 130, 246, 0.15);
-            border-radius: 20px;
-            font-size: 0.8rem;
-            color: var(--text-sec);
-        }
-
-        .cv-skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-
-        .cv-skill-tag {
-            padding: 4px 12px;
-            background: rgba(59, 130, 246, 0.08);
-            border: 1px solid rgba(59, 130, 246, 0.15);
-            border-radius: 6px;
-            font-size: 0.8rem;
-            color: var(--text-sec);
-        }
-
-        .cv-exp-item {
-            padding-left: 20px;
-            border-left: 2px solid var(--accent);
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        .cv-exp-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .cv-exp-item::before {
-            content: '';
-            position: absolute;
-            left: -5px;
-            top: 4px;
-            width: 8px;
-            height: 8px;
-            background: var(--accent);
-            border-radius: 50%;
-        }
-
-        .cv-exp-title {
-            font-size: 1rem;
-            font-weight: 700;
-        }
-
-        .cv-exp-subtitle {
-            font-size: 0.8rem;
-            color: var(--accent);
-            font-weight: 500;
-            margin-top: 2px;
-        }
-
-        .cv-exp-desc {
-            font-size: 0.85rem;
-            color: var(--text-sec);
-            margin-top: 6px;
-            line-height: 1.6;
-        }
-
-        .cv-exp-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 4px;
-            margin-top: 8px;
-        }
-
-        .cv-exp-tag {
             padding: 2px 8px;
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: 4px;
+            background: rgba(59, 130, 246, 0.08);
+            border: 1px solid rgba(59, 130, 246, 0.15);
+            border-radius: 12px;
             font-size: 0.7rem;
             color: var(--text-sec);
-        }
-
-        .cv-formation-item {
-            margin-bottom: 16px;
-        }
-
-        .cv-formation-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .cv-formation-title {
-            font-size: 0.9rem;
-            font-weight: 700;
-        }
-
-        .cv-formation-sub {
-            font-size: 0.8rem;
-            color: var(--text-sec);
-            margin-top: 2px;
         }
 
         .cv-lang-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 8px 0;
+            padding: 3px 0;
             border-bottom: 1px solid var(--border);
         }
 
-        .cv-lang-item:last-child {
-            border-bottom: none;
+        .cv-lang-item:last-child { border-bottom: none; }
+        .cv-lang-name { font-size: 0.78rem; font-weight: 500; }
+        .cv-lang-level { font-size: 0.68rem; color: var(--text-muted); }
+
+        .cv-exp-item {
+            padding-left: 14px;
+            border-left: 2px solid var(--accent);
+            margin-bottom: 10px;
+            position: relative;
         }
 
-        .cv-lang-name {
-            font-size: 0.85rem;
-            font-weight: 500;
+        .cv-exp-item:last-child { margin-bottom: 0; }
+
+        .cv-exp-item::before {
+            content: '';
+            position: absolute;
+            left: -4px;
+            top: 3px;
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
         }
 
-        .cv-lang-level {
+        .cv-exp-title { font-size: 0.82rem; font-weight: 700; }
+
+        .cv-exp-desc {
             font-size: 0.75rem;
-            color: var(--text-muted);
+            color: var(--text-sec);
+            margin-top: 2px;
+            line-height: 1.4;
         }
+
+        .cv-exp-tags { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 4px; }
+
+        .cv-exp-tag {
+            padding: 1px 6px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            font-size: 0.62rem;
+            color: var(--text-sec);
+        }
+
+        .cv-skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px 16px;
+            font-size: 0.75rem;
+        }
+
+        .cv-skills-grid span { color: var(--text-sec); }
+
+        .cv-formation-title { font-size: 0.8rem; font-weight: 700; }
+        .cv-formation-sub { font-size: 0.73rem; color: var(--text-sec); margin-top: 1px; }
 
         .cv-back-btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
+            gap: 6px;
+            padding: 8px 16px;
             background: var(--accent);
             color: white;
-            border-radius: 8px;
-            font-size: 0.85rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
             font-weight: 600;
             text-decoration: none;
-            transition: all 0.3s ease;
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 20px;
+            right: 20px;
             z-index: 100;
             box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
         }
 
-        .cv-back-btn:hover {
-            background: #2563eb;
-            transform: translateY(-2px);
-        }
+        .cv-back-btn:hover { background: #2563eb; }
 
         .cv-print-btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
+            gap: 6px;
+            padding: 8px 16px;
             background: var(--green);
             color: white;
-            border-radius: 8px;
-            font-size: 0.85rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
             font-weight: 600;
             text-decoration: none;
-            transition: all 0.3s ease;
             position: fixed;
-            bottom: 30px;
-            right: 180px;
+            bottom: 20px;
+            right: 130px;
             z-index: 100;
             box-shadow: 0 4px 20px rgba(34, 197, 94, 0.3);
             cursor: pointer;
@@ -347,79 +263,43 @@
             font-family: inherit;
         }
 
-        .cv-print-btn:hover {
-            background: #16a34a;
-            transform: translateY(-2px);
-        }
+        .cv-print-btn:hover { background: #16a34a; }
 
         @media print {
-            body {
-                background: white;
-                color: #1a1a1a;
-            }
+            @page { size: A4; margin: 0; }
+
+            body { background: white; color: #1a1a1a; font-size: 11px; }
 
             .cv-page {
                 margin: 0;
                 border: none;
                 border-radius: 0;
                 box-shadow: none;
-                max-width: 100%;
+                width: 100%;
+                min-height: auto;
             }
 
-            .cv-header {
-                background: #f0f4ff;
-            }
+            .cv-header { background: #f0f4ff; padding: 14px 20px; }
+            .cv-sidebar { background: #f8f9fa; padding: 12px 14px; }
+            .cv-main { padding: 12px 16px; }
+            .cv-section { margin-bottom: 10px; }
+            .cv-section-title { margin-bottom: 6px; padding-bottom: 3px; }
+            .cv-exp-item { margin-bottom: 8px; }
+            .cv-back-btn, .cv-print-btn { display: none; }
 
-            .cv-sidebar {
-                background: #f8f9fa;
-            }
-
-            .cv-back-btn,
-            .cv-print-btn {
-                display: none;
-            }
-
-            .cv-exp-tag,
-            .cv-passion,
-            .cv-skill-tag,
-            .cv-exp-item::before,
-            .cv-section-title {
+            .cv-exp-tag, .cv-passion, .cv-section-title, .cv-exp-item::before {
                 print-color-adjust: exact;
                 -webkit-print-color-adjust: exact;
             }
         }
 
         @media (max-width: 768px) {
-            .cv-page {
-                margin: 16px;
-            }
-
-            .cv-header {
-                flex-direction: column;
-                gap: 20px;
-                padding: 32px 24px;
-            }
-
-            .cv-header-right {
-                text-align: left;
-            }
-
-            .cv-body {
-                grid-template-columns: 1fr;
-            }
-
-            .cv-sidebar {
-                border-right: none;
-                border-bottom: 1px solid var(--border);
-            }
-
-            .cv-main {
-                padding: 32px 24px;
-            }
-
-            .cv-sidebar {
-                padding: 24px;
-            }
+            .cv-page { margin: 10px; border-radius: 8px; }
+            .cv-header { flex-direction: column; gap: 12px; padding: 16px; }
+            .cv-header-right { text-align: left; }
+            .cv-body { grid-template-columns: 1fr; }
+            .cv-sidebar { border-right: none; border-bottom: 1px solid var(--border); padding: 14px; }
+            .cv-main { padding: 14px; }
         }
     </style>
 </head>
@@ -428,14 +308,11 @@
     <div class="cv-page">
         <div class="cv-header">
             <div class="cv-header-left">
-                <img src="images/profile.jpeg" alt="Photo de profil" class="cv-photo"/>
+                <img src="images/hero-bg2.png" alt="Photo de profil" class="cv-photo"/>
                 <div>
                     <h1>Randrianandrasana <span class="accent">Jean Aime</span></h1>
                     <p class="role">Developpeur Fullstack &amp; Admin Systeme</p>
-                    <p class="tagline">
-                        Passionne par le developpement web et l'administration systeme.
-                        Je construis des applications robustes, du backend a l'interface utilisateur.
-                    </p>
+                    <p class="tagline">Developpeur fullstack et administrateur systeme, diplomme de l'ENI en Informatique. Je cree des applications web et de bureau robustes.</p>
                 </div>
             </div>
             <div class="cv-header-right">
@@ -491,32 +368,31 @@
                     </div>
                     <div class="cv-lang-item">
                         <span class="cv-lang-name">Malagasy</span>
-                        <span class="cv-lang-level">Langue maternelle</span>
+                        <span class="cv-lang-level">Maternelle</span>
                     </div>
+                </div>
+
+                <div class="cv-section">
+                    <h2 class="cv-section-title">Formation</h2>
+                    <div class="cv-formation-title">Bac+2 Informatique</div>
+                    <div class="cv-formation-sub">ENI — Ecole Numerique d'Ingenieurs</div>
                 </div>
             </div>
 
             <div class="cv-main">
                 <div class="cv-section">
-                    <h2 class="cv-section-title">Profil</h2>
-                    <p style="font-size: 0.82rem; color: var(--text-sec); line-height: 1.6;">
-                        Developpeur fullstack et administrateur systeme, diplomme de l'ENI en Informatique.
-                        Je cree des applications web robustes (PHP/Laravel, Vue.js) et des apps de bureau (C#/.NET, Python).
-                        Autonome et curieux, je cherche a approfondir mes competences en securite reseau et administration infrastructure.
-                    </p>
-                </div>
-
-                <div class="cv-section">
                     <h2 class="cv-section-title">Competences</h2>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; font-size: 0.82rem;">
-                        <span style="color: var(--text-sec);">PHP / Laravel</span>
-                        <span style="color: var(--text-sec);">Vue.js / JavaScript</span>
-                        <span style="color: var(--text-sec);">HTML / CSS / Tailwind</span>
-                        <span style="color: var(--text-sec);">MySQL / MariaDB</span>
-                        <span style="color: var(--text-sec);">C# / .NET / Avalonia</span>
-                        <span style="color: var(--text-sec);">Python / PyQt5</span>
-                        <span style="color: var(--text-sec);">Bash / PowerShell</span>
-                        <span style="color: var(--text-sec);">Reseaux (OSPF, RIP)</span>
+                    <div class="cv-skills-grid">
+                        <span>PHP / Laravel</span>
+                        <span>Vue.js / JavaScript</span>
+                        <span>HTML / CSS / Tailwind</span>
+                        <span>MySQL / MariaDB</span>
+                        <span>C# / .NET / Avalonia</span>
+                        <span>Python / PyQt5</span>
+                        <span>Bash / PowerShell</span>
+                        <span>Reseaux (OSPF, RIP)</span>
+                        <span>Git / GitHub</span>
+                        <span>Deploiement (Render, Netlify)</span>
                     </div>
                 </div>
 
@@ -525,7 +401,7 @@
 
                     <div class="cv-exp-item">
                         <h3 class="cv-exp-title">Mi-Trosa</h3>
-                        <p class="cv-exp-desc">Application fullstack de gestion de prets bancaires — REST API, authentification SPA, export PDF/Excel, tableau de bord.</p>
+                        <p class="cv-exp-desc">Gestion de prets bancaires — REST API, authentification SPA, export PDF/Excel, tableau de bord.</p>
                         <div class="cv-exp-tags">
                             <span class="cv-exp-tag">Laravel 12</span>
                             <span class="cv-exp-tag">Vue 3</span>
@@ -536,7 +412,7 @@
 
                     <div class="cv-exp-item">
                         <h3 class="cv-exp-title">Mi-Findra</h3>
-                        <p class="cv-exp-desc">Application MVC de gestion des affectations geographiques — protection force brute, generation PDF, notifications email.</p>
+                        <p class="cv-exp-desc">Gestion des affectations geographiques — protection force brute, generation PDF, notifications email.</p>
                         <div class="cv-exp-tags">
                             <span class="cv-exp-tag">PHP 8.1</span>
                             <span class="cv-exp-tag">MVC</span>
@@ -547,11 +423,10 @@
 
                     <div class="cv-exp-item">
                         <h3 class="cv-exp-title">AnDao</h3>
-                        <p class="cv-exp-desc">Application de bureau de reservations ferroviaires — suivi temps reel, gestion retards/pannes, export CSV.</p>
+                        <p class="cv-exp-desc">Reservations ferroviaires — suivi temps reel, gestion retards/pannes, export CSV.</p>
                         <div class="cv-exp-tags">
                             <span class="cv-exp-tag">C#</span>
                             <span class="cv-exp-tag">.NET 10</span>
-                            <span class="cv-exp-tag">JetBrains Rider</span>
                             <span class="cv-exp-tag">Avalonia UI</span>
                             <span class="cv-exp-tag">SQLite</span>
                         </div>
@@ -559,7 +434,7 @@
 
                     <div class="cv-exp-item">
                         <h3 class="cv-exp-title">CompusNay</h3>
-                        <p class="cv-exp-desc">Plateforme de partage de documents universitaires — roles utilisateurs, favoris, commentaires, admin.</p>
+                        <p class="cv-exp-desc">Partage de documents universitaires — roles utilisateurs, favoris, commentaires, admin.</p>
                         <div class="cv-exp-tags">
                             <span class="cv-exp-tag">PHP</span>
                             <span class="cv-exp-tag">MySQL</span>
@@ -569,7 +444,7 @@
 
                     <div class="cv-exp-item">
                         <h3 class="cv-exp-title">Hotelin-Tsika</h3>
-                        <p class="cv-exp-desc">Application de gestion hoteliere — clients, employes, recrutement, paie, import/export CSV.</p>
+                        <p class="cv-exp-desc">Gestion hoteliere — clients, employes, recrutement, paie, import/export CSV.</p>
                         <div class="cv-exp-tags">
                             <span class="cv-exp-tag">Python</span>
                             <span class="cv-exp-tag">PyQt5</span>
@@ -577,26 +452,18 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="cv-section">
-                    <h2 class="cv-section-title">Formation</h2>
-                    <div class="cv-formation-item">
-                        <h3 class="cv-formation-title">Bac+2 Informatique</h3>
-                        <p class="cv-formation-sub">ENI — Ecole Numerique d'Ingenieurs</p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 
     <a href="index.html" class="cv-back-btn">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
-        Retour au portfolio
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+        Retour
     </a>
 
     <button class="cv-print-btn" onclick="window.print()">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-        Imprimer / PDF
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Imprimer
     </button>
 
 </body>
