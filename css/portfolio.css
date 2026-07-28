@@ -522,6 +522,15 @@ img {
 .btn-small:hover {
     animation: breathe-btn 1.8s ease-in-out infinite;
 }
+.btn-demo-soon {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+    background: rgba(255, 193, 7, 0.1);
+    color: #e6a817;
+    border: 1px dashed rgba(255, 193, 7, 0.4);
+    cursor: default;
+    opacity: 0.8;
+}
 .btn-large {
     padding: 16px 32px;
     font-size: 1rem;
