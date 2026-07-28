@@ -1,8 +1,7 @@
-/* ============================================
-   PORTFOLIO — Randrianandrasana Jean Aimé
-   Animated dark theme, responsive, single-page
-   ============================================ */
-/* ---------- Reset & Base ---------- */
+/* PORTFOLIO — Randrianandrasana Jean Aime
+   Theme sombre anime, responsive, page unique */
+
+/* Reinitialisation et base */
 *,
 *::before,
 *::after {
@@ -153,7 +152,7 @@ img {
 .accent {
     color: var(--accent);
 }
-/* ---------- Particles Canvas ---------- */
+/* Canvas des particules */
 #particles-canvas {
     position: fixed;
     top: 0;
@@ -163,7 +162,7 @@ img {
     z-index: 0;
     pointer-events: none;
 }
-/* ---------- Floating Shapes ---------- */
+/* Formes flottantes decoratives */
 .floating-shapes {
     position: absolute;
     inset: 0;
@@ -230,7 +229,7 @@ img {
     33% { transform: translate(30px, -50px) rotate(10deg); }
     66% { transform: translate(-20px, 20px) rotate(-10deg); }
 }
-/* ---------- Navbar ---------- */
+/* Barre de navigation */
 .navbar {
     position: fixed;
     top: 0;
@@ -329,7 +328,7 @@ img {
 .nav-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
 }
-/* ---------- Hero ---------- */
+/* Section hero (accueil) */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -426,7 +425,7 @@ img {
     animation: slide-up 0.6s ease forwards;
     animation-delay: 1.4s;
 }
-/* ---------- Profile Card ---------- */
+/* Carte de profil */
 .profile-card {
     width: 300px;
     display: flex;
@@ -513,7 +512,7 @@ img {
     0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
     50% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
 }
-/* ---------- Buttons ---------- */
+/* Boutons */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -588,7 +587,7 @@ img {
     color: var(--text-muted);
     box-shadow: none;
 }
-/* ---------- Section Titles ---------- */
+/* Titres de section */
 .section-title {
     font-family: var(--font-heading);
     font-size: clamp(2.2rem, 5vw, 3.2rem);
@@ -603,7 +602,7 @@ img {
     color: var(--text-muted);
     margin-bottom: 48px;
 }
-/* ---------- About ---------- */
+/* Section a propos */
 .about {
     padding: 120px 0;
     background: var(--bg-secondary);
@@ -756,7 +755,7 @@ img {
     color: var(--text-muted);
     margin: 0;
 }
-/* ---------- Skills ---------- */
+/* Competences */
 .skills {
     padding: 120px 0;
     background: var(--bg-primary);
@@ -849,7 +848,7 @@ img {
 .progress-fill.animated .progress-text {
     opacity: 1;
 }
-/* ---------- Tech Tags ---------- */
+/* Etiquettes technologiques */
 .tech-tags-section {
     text-align: center;
 }
@@ -932,7 +931,7 @@ img {
     color: var(--accent);
     animation: breathe-tag 1.6s ease-in-out infinite;
 }
-/* ---------- Projects ---------- */
+/* Projets */
 .projects {
     padding: 120px 0;
     background: var(--bg-secondary);
@@ -1065,7 +1064,7 @@ img {
     gap: 12px;
     margin-top: auto;
 }
-/* ---------- Tags (shared) ---------- */
+/* Etiquettes (commun) */
 .tag {
     padding: 6px 14px;
     background: var(--bg-card);
@@ -1080,7 +1079,7 @@ img {
     color: var(--accent);
     animation: breathe-tag 1.6s ease-in-out infinite;
 }
-/* ---------- Contact ---------- */
+/* Contact */
 .contact {
     padding: 120px 0;
     background: var(--bg-primary);
@@ -1165,7 +1164,7 @@ img {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-4px); }
 }
-/* ---------- Footer ---------- */
+/* Pied de page */
 .footer {
     padding: 60px 0;
     border-top: 1px solid var(--border);
@@ -1224,7 +1223,7 @@ img {
     font-size: 0.8rem;
     color: var(--text-muted);
 }
-/* ---------- Scroll Reveal Animations ---------- */
+/* Animations d'apparition au scroll */
 @keyframes slide-up {
     from {
         opacity: 0;
@@ -1269,7 +1268,7 @@ img {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-/* Reveal classes (JS-driven) */
+/* Classes d'apparition (animees par JS) */
 .reveal-up,
 .reveal-left,
 .reveal-right,
@@ -1296,7 +1295,7 @@ img {
     opacity: 1;
     transform: translate(0, 0);
 }
-/* ---------- Responsive ---------- */
+/* Adaptation mobile (responsive) */
 @media (max-width: 1024px) {
     .hero-content {
         flex-direction: column-reverse;
@@ -1328,6 +1327,7 @@ img {
         display: flex;
     }
     .theme-toggle {
+        display: flex;
         position: fixed;
         top: 18px;
         right: 60px;
@@ -1458,7 +1458,7 @@ img {
         font-size: 1.4rem;
     }
 }
-/* ---------- Custom Scrollbar ---------- */
+/* Barre de defilement personnalisee */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -1472,12 +1472,12 @@ img {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent);
 }
-/* ---------- Selection ---------- */
+/* Selection de texte */
 ::selection {
     background: rgba(59, 130, 246, 0.3);
     color: var(--text-primary);
 }
-/* ---------- Lightbox ---------- */
+/* Visionneuse d'image (lightbox) */
 .lightbox-overlay {
     display: none;
     position: fixed;
@@ -1535,13 +1535,14 @@ img {
 .lightbox-close:hover {
     background: var(--accent);
 }
-/* Project image click cursor */
+/* Curseur sur les images de projet */
 .project-image img,
 .project-image-placeholder img {
     cursor: zoom-in;
 }
-/* Theme toggle */
+/* Basculement du theme clair/sombre */
 .theme-toggle {
+    display: none;
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -1549,7 +1550,6 @@ img {
     background: var(--bg-card);
     color: var(--text-primary);
     cursor: pointer;
-    display: flex;
     align-items: center;
     justify-content: center;
     transition: var(--transition);
