@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Randrianandrasana Jean Aimée — Portfolio</title>
+  <meta name="description" content="Portfolio de Randrianandrasana Jean Aimée — Développeur Full Stack, Admin Système & Réseaux" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="#about" class="nav-logo">
+      <span class="logo-text">Randrianandrasana</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about" class="active">À propos</a>
+      <a href="#skills">Mes Services</a>
+      <a href="#projects">Projets</a>
+      <a href="#contact" class="btn-contact">Contact</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- SCROLL CONTAINER -->
+<div class="scroll-container" id="scrollContainer">
+
+  <!-- PAGE 0 : A PROPOS -->
+  <section class="scroll-page hero-page" id="about">
+    <img
+      src="images/profile-cutout.png"
+      alt="Photo de profil de Randrianandrasana Jean Aimée"
+      class="hero-portrait"
+    />
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1>
+            Développeur<br/>
+            <span class="gradient-text">Full Stack</span>
+          </h1>
+          <p class="hero-sub">
+            Étudiant L2 IG à l'ENI Fianarantsoa. Prêt à de nouveaux défis dans le monde de la programmation.
+          </p>
+          <div class="hero-tags">
+            <span class="tag"><i class="fab fa-react"></i> React / Node</span>
+            <span class="tag"><i class="fab fa-php"></i> PHP / Laravel</span>
+            <span class="tag"><i class="fab fa-python"></i> Python / Flask</span>
+            <span class="tag"><i class="fab fa-linux"></i> Linux / Docker</span>
+          </div>
+          <p style="color: var(--gray); max-width: 440px; font-size: 0.92rem; margin-bottom: 24px;">
+            En phase avec l'administration des systèmes et réseaux informatiques.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Me contacter
+            </a>
+            <a href="Aimee-randria.pdf" class="btn btn-outline" target="_blank">
+              <i class="fas fa-file-pdf"></i> Mon CV
+            </a>
+          </div>
+          <div class="profile-stats hero-stats">
+            <span class="stat-badge"><i class="fas fa-folder-open"></i> +6 projets</span>
+            <span class="stat-badge"><i class="fas fa-graduation-cap"></i> L2 IG</span>
+            <span class="stat-badge"><i class="fas fa-server"></i> 21 ans</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 1 : COMPETENCE -->
+  <section class="scroll-page" id="skills">
+    <div class="container">
+      <h2 class="section-title">Mes Services</h2>
+      <div class="grid-3">
+        <!-- Frontend -->
+        <div class="skill-card anim-fade-up delay-1">
+          <div class="card-icon"><i class="fas fa-code"></i></div>
+          <h4>Frontend</h4>
+          <p>Interfaces réactives et accessibles avec les technologies web.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Vue.js</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">HTML5/CSS3</span>
+            <span class="skill-tag">Tailwind</span>
+            <span class="skill-tag">Bootstrap</span>
+          </div>
+        </div>
+        <!-- Backend -->
+        <div class="skill-card anim-fade-up delay-2">
+          <div class="card-icon"><i class="fas fa-server"></i></div>
+          <h4>Backend & API</h4>
+          <p>API RESTful, services métier et logique applicative.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">Laravel</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">.NET</span>
+          </div>
+        </div>
+        <!-- Base de données -->
+        <div class="skill-card anim-fade-up delay-3">
+          <div class="card-icon"><i class="fas fa-database"></i></div>
+          <h4>Bases de données</h4>
+          <p>Conception, optimisation et administration de bases relationnelles.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">MariaDB</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MySQL</span>
+          </div>
+        </div>
+        <!-- DevOps -->
+        <div class="skill-card anim-fade-up delay-4">
+          <div class="card-icon"><i class="fas fa-cloud"></i></div>
+          <h4>DevOps & Conteneurisation</h4>
+          <p>Déploiement, conteneurisation et intégration continue.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Apache</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">CI/CD</span>
+          </div>
+        </div>
+        <!-- Systeme -->
+        <div class="skill-card anim-fade-up delay-5">
+          <div class="card-icon"><i class="fas fa-terminal"></i></div>
+          <h4>Administration Système</h4>
+          <p>Administration Linux, Windows, réseaux et déploiement serveurs.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">TCP/IP</span>
+            <span class="skill-tag">Shell/Powershell</span>
+            <span class="skill-tag">Systemd</span>
+            <span class="skill-tag">GPO</span>
+            <span class="skill-tag">ADDS</span>
+          </div>
+        </div>
+        
+        <!-- UI/UX -->
+        <div class="skill-card anim-fade-up delay-6">
+          <div class="card-icon"><i class="fas fa-palette"></i></div>
+          <h4>UI/UX Design</h4>
+          <p>Conception d'interfaces intuitives et expériences utilisateur soignées.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Blender</span>
+            <span class="skill-tag">Responsive</span>
+            <span class="skill-tag">Dark Mode</span>
+          </div>
+        </div>
+      </div>
+      <div class="extras-row">
+        <span class="extra-badge"><i class="fab fa-git-alt"></i> Git / GitHub</span>
+        <span class="extra-badge"><i class="fas fa-network-wired"></i> Réseaux (TCP/IP)</span>
+        <span class="extra-badge"><i class="fab fa-php"></i> PHP 8.5</span>
+        <span class="extra-badge"><i class="fab fa-python"></i> Python 3</span>
+        <span class="extra-badge"><i class="fab fa-windows"></i> C# / .NET</span>
+        <span class="extra-badge"><i class="fas fa-shield-alt"></i> Sécurité web</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 2 : PROJET -->
+  <section class="scroll-page" id="projects">
+    <div class="container">
+      <h2 class="section-title">Projets récents</h2>
+      <p class="section-sub">.</p>
+      <div class="works-grid" id="worksGrid">
+
+
+        <!-- Projet 1 : Hotelin Tsika -->
+        <div class="work-card anim-pop delay-3">
+          <div class="work-thumb">
+            <img src="images/proj-hotel.png" alt="Hotelin Tsika Web" class="work-img" />
+            <span class="work-type"><i class="fas fa-code"></i> Web App</span>
+            <div class="work-overlay">
+              <h4>Hotelin Tsika</h4>
+              <p>Application web de gestion d'hôtel avec clients, employés, facturation et archive.</p>
+              <div class="work-tags"><span>Python</span><span>Flask</span><span>PostgreSQL</span></div>
+              <div class="work-links">
+                <a href="https://github.com/aimee-randrianandrasana/Hotelin-Tsika-Web" target="_blank"><i class="fab fa-github"></i> Code</a>
+                <a href="https://hotelin-tsika-web.onrender.com" target="_blank"><i class="fas fa-external-link-alt"></i> demo.</a>
+              </div>
+            </div>
+          </div>
+          <div class="work-info">
+            <h4>Hotelin Tsika Web</h4>
+            <p>Gestion d'hôtel — Python, Flask, PostgreSQL</p>
+          </div>
+        </div>
+
+        <!-- Projet 2 : Mi-Vantana -->
+        <div class="work-card anim-pop delay-4">
+          <div class="work-thumb">
+            <img src="images/Mi-vantana.png" alt="Mi-Vantana" class="work-img" />
+            <span class="work-type"><i class="fas fa-desktop"></i> Desktop</span>
+            <div class="work-overlay">
+              <p>Application desktop de gestion d'hôtel avec interface graphique, paie employés et facturation clients.</p>
+              <div class="work-tags"><span>Python</span><span>PyQt5</span><span>MariaDB</span></div>
+              <div class="work-links">
+                <a href="https://github.com/aimee-randrianandrasana/Hotelin-Tsika" target="_blank"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="work-info">
+            <h4>Mi-Vantana</h4>
+            <p>Hotel Manager Desktop — Python, PyQt5, MariaDB</p>
+          </div>
+        </div>
+
+        <!-- Projet 3 : Andao -->
+        <div class="work-card anim-pop delay-5">
+          <div class="work-thumb">
+            <img src="images/proj-andao.png" alt="Andao" class="work-img" />
+            <span class="work-type"><i class="fas fa-desktop"></i> Desktop</span>
+            <div class="work-overlay">
+              <h4>Andao</h4>
+              <p>Simulation de gestion ferroviaire avec réservations, villes, trains et gestion en temps réel.</p>
+              <div class="work-tags"><span>C#</span><span>.NET</span><span>Avalonia</span><span>SQLite</span></div>
+              <div class="work-links">
+                <a href="https://github.com/aimee-randrianandrasana/AnDao" target="_blank"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="work-info">
+            <h4>Andao</h4>
+            <p>Gestion ferroviaire — C#, .NET, SQLite</p>
+          </div>
+        </div>
+
+        <!-- Projet 4 : Portfolio -->
+        <div class="work-card anim-pop delay-6">
+          <div class="work-thumb">
+            <img src="images/portfolio-site.png" alt="Portfolio Personnel" class="work-img" />
+            <span class="work-type"><i class="fas fa-code"></i> Frontend</span>
+            <div class="work-overlay">
+              <h4>Portfolio Personnel</h4>
+              <p>Site portfolio moderne avec animations et navigation horizontale.</p>
+              <div class="work-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+              <div class="work-links">
+                <a href="https://jeanaimee.netlify.app" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+              </div>
+            </div>
+          </div>
+          <div class="work-info">
+            <h4>Portfolio</h4>
+            <p>Site portfolio — HTML, CSS, JavaScript</p>
+          </div>
+        </div>
+
+        <!-- Projet 5  : Mi-Trosa -->
+        <div class="work-card anim-pop delay-2">
+          <div class="work-thumb">
+            <img src="images/Mi-trosa.png" alt="Mi-Trosa" class="work-img" />
+            <span class="work-type"><i class="fas fa-code"></i> Full Stack</span>
+            <div class="work-overlay">
+              <h4>Mi-Trosa</h4>
+              <p>Application de gestion de prêts bancaires avec tableau de bord, calculs d'intérêts et suivi des paiements.</p>
+              <div class="work-tags"><span>Laravel 12</span><span>Vue.js</span><span>MySQL</span><span>Sanctum</span></div>
+              <div class="work-links">
+                <a href="https://github.com/aimee-randrianandrasana/Mi-Trosa" target="_blank"><i class="fab fa-github"></i> Code</a>
+                <a href="https://mi-trosa.onrender.com/" target="_blank"><i class="fas fa-external-link-alt"></i> Démo</a>
+              </div>
+            </div>
+          </div>
+          <div class="work-info">
+            <h4>Mi-Trosa</h4>
+            <p>Gestion de prêts bancaires — Laravel, MySQL</p>
+          </div>
+        </div>
+
+        <!-- Projet 6 : Mi-Findra -->
+                <div class="work-card anim-pop delay-1">
+                  <div class="work-thumb">
+                    <img src="images/Mi-Findra.png" alt="Mi-Findra" class="work-img" />
+                    <span class="work-type"><i class="fas fa-code"></i> Web App</span>
+                    <div class="work-overlay">
+                      <h4>Mi-Findra</h4>
+                      <p>Système de gestion des affectations du personnel avec suivi historique et notifications par email.</p>
+                      <div class="work-tags"><span>PHP</span><span>MySQL</span><span>Laravel</span></div>
+                      <div class="work-links">
+                        <a href="https://github.com/aimee-randrianandrasana/Hi-Findra" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://mi-findra.onrender.com/" target="_blank"><i class="fas fa-external-link-alt"></i> Démo</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work-info">
+                    <h4>Mi-Findra</h4>
+                    <p>Gestion des affectations — PHP, MySQL, MariaDB</p>
+                  </div>
+                </div>
+
+        <!-- Projet 7 : Banky Soa -->
+        <div class="work-card anim-pop delay-6">
+          <div class="work-thumb">
+            <img src="images/banky-soa.png" alt="Banky Soa" class="work-img" />
+            <span class="work-type"><i class="fas fa-desktop"></i> Desktop</span>
+            <div class="work-overlay">
+              <h4>Banky Soa</h4>
+              <p>Application Java avec interface graphique et gestion de données.</p>
+              <div class="work-tags"><span>Java</span><span>Swing</span><span>JDBC</span></div>
+              <div class="work-links">
+                <a href="https://github.com/aimee-randrianandrasana" target="_blank"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="work-info">
+            <h4>Banky Soa</h4>
+            <p>Application Desktop — Java, Swing, JDBC</p>
+          </div>
+        </div>
+
+      </div>
+      <button class="btn btn-outline voir-plus-btn" id="voirPlusBtn" style="margin: 30px auto 0; display: block;">
+        <i class="fas fa-eye"></i> Voir plus
+      </button>
+    </div>
+  </section>
+
+  <!-- PAGE 3 : CONTACT -->
+  <section class="scroll-page" id='contact' data-index="3">
+    <div class="container">
+      <div class="contact-section">
+        <div class="contact-info">
+          <h2>Discutons</h2>
+          <p>Que ce soit pour un stage, une collaboration ou simplement échanger, je suis disponible.</p>
+          <div class="contact-methods">
+            <div class="contact-method">
+              <i class="fas fa-envelope"></i>
+              <span>randrianandrasanajeanaimee@gmail.com</span>
+            </div>
+            <div class="contact-method">
+              <i class="fas fa-phone"></i>
+              <span>+261 38 45 868 05</span>
+            </div>
+            <div class="contact-method">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Fianarantsoa, Madagascar</span>
+            </div>
+          </div>
+          <a href="Aimee-randria.pdf" class="btn btn-outline" download style="margin-bottom: 20px;">
+            <i class="fas fa-file-pdf"></i> Télécharger mon CV
+          </a>
+          <div class="social-links">
+            <a href="https://github.com/aimee-randrianandrasana" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://web.facebook.com/aimee.randrianandrasana.2025" target="_blank" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://t.me/aime_dev" target="_blank" class="social-link" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" method="POST" action="https://formsubmit.co/randrianandrasanajeanaimee@gmail.com">
+          <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" style="display:none" />
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" name="nom" placeholder="Votre nom" required />
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Votre email" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" name="objet" placeholder="Objet du message" />
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Votre message..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit">
+            Envoyer <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!--  FOOTER -->
+<footer>
+  <div class="container">
+    &copy; 2026 Randrianandrasana Jean Aimée
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
